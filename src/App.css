@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+body {
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Makes sure it takes the full height of the viewport */
+  margin: 0;
+}
+
+/* Main container centering */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* Set a max width for larger screens */
+  background-color: #44444473; /* Subtle background color */
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Centered content within the main container */
+.center-container {
+  width: 100%;
+}
+
+/* Heading Styles */
+.app-heading {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem; /* Adjusted font size */
+  text-transform: uppercase;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 10px; /* Adds consistent spacing between elements */
+}
+
+/* Input box styles */
+.input-box-todo {
+  flex-grow: 1;
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid #888;
+  padding-left: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-size: large;
+}
+
+/* Add button */
+.add-btn {
+  width: 75px;
+  height: 40px;
+  border-radius: 14px;
+  border: none;
+  background-color: #44db5d;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(11, 10, 10, 0.3);
+  transition: 0.3s;
+}
+
+.add-btn:active {
+  box-shadow: none;
+}
+
+/* List styling */
+.list-item {
+  list-style-type: none;
+  border: 2px solid rgb(161, 158, 158);
+  color: white;
+  padding: 8px 5px;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread content to the edges */
+  margin-top: 10px;
+}
+
+/* Icon container */
+.icons {
+  display: flex;
+  gap: 8px; /* Space between icons */
+}
+
+.icons i {
+  font-size: large;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.icon-delete:hover {
+  color: red;
+}
+
+.icon-edit {
+  color: #007bff;
+}
+
+.icon-edit:hover {
+  color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    max-width: 400px; /* Adjust max width for tablet screens */
+  }
+
+  .app-heading {
+    font-size: 1.3rem; /* Slightly smaller heading font size */
+  }
+
+  .input-box-todo {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    width: 90%; /* Full width for small screens */
+    padding: 15px;
+  }
+
+  .app-heading {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .input-container {
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px;
+  }
+
+  .input-box-todo,
+  .add-btn {
+    width: 100%; /* Full width for inputs and button */
+  }
+
+  .add-btn {
+    border-radius: 10px; /* Rounded corners for button on smaller screens */
+  }
+}
